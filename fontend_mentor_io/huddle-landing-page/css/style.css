@@ -303,7 +303,7 @@ footer .card {
   height: 100%;
   top: 0.3rem;
   left: 0;
-  background-image: url("/images/icon-location.svg");
+  background-image: url("./images/icon-location.svg");
   background-repeat: no-repeat;
 }
 
@@ -318,7 +318,7 @@ footer .card {
   height: 100%;
   top: 0.3rem;
   left: 0;
-  background-image: url("/images/icon-phone.svg");
+  background-image: url("./images/icon-phone.svg");
   background-repeat: no-repeat;
 }
 
@@ -333,7 +333,7 @@ footer .card {
   height: 100%;
   top: 0.3rem;
   left: 0;
-  background-image: url("/images/icon-email.svg");
+  background-image: url("./images/icon-email.svg");
   background-repeat: no-repeat;
 }
 
