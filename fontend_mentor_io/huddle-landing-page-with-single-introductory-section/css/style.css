@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+/* font-family: 'Poppins', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* font-family: 'Open Sans', sans-serif; */
+
+:root {
+  box-sizing: border-box;
+
+  /* Colors */
+  --Violet: hsl(257, 40%, 49%);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  background-image: url("./../images/bg-desktop.svg");
+  background-color: var(--Violet);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100vh;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: var(--Violet);
+  background-color: white;
+  border-radius: 50px;
+  padding: 0.625em 3em;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.main-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+}
+
+.media {
+  margin-right: 30px;
+  flex: 1;
+}
+
+.card {
+  margin-left: 30px;
+  flex: 0.7;
+  padding-top: 50px;
+}
+
+header {
+  padding-top: 10%;
+}
+
+.logo {
+  align-self: center;
+  flex: 1;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+footer {
+  justify-self: flex-end;
+  height: 100px;
+}
+
+.social {
+  justify-content: flex-end;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+}
+
+.circle + .circle {
+  margin-left: 20px;
+}
+
+@media (max-width: 769px) {
+  body {
+    background-image: url("./../images/bg-mobile.svg");
+    background-position: top;
+    background-size: 100%;
+  }
+
+  header {
+    padding-top: 5%;
+  }
+
+  main.flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .media {
+    margin-right: 0px;
+    flex: 1;
+    width: 80%;
+  }
+
+  .card {
+    text-align: center;
+    margin-left: 0px;
+    flex: 1;
+    padding-top: 30px;
+    width: 80%;
+  }
+
+  .social {
+    justify-content: center;
+  }
+
+  footer {
+    margin-top: 20px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 412px) {
+  body {
+    background-image: url("./../images/bg-mobile.svg");
+    background-position: top;
+    background-size: 100%;
+  }
+
+  header {
+    padding-top: 3%;
+  }
+
+  .logo img {
+    width: 50%;
+  }
+
+  footer {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 50px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+
+    padding: 0.625em 3em;
+  }
+}
