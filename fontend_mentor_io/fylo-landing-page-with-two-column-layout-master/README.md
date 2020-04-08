@@ -9,4 +9,4 @@
 ### Превью
 <img src="./design/desktop-preview.jpg" width="400">
 
-[Live](https://kosticyn.github.io/fontend_mentor_io/fylo-landing-page-with-two-column-layout/)
+[Live](https://kosticyn.github.io/fontend_mentor_io/fylo-landing-page-with-two-column-layout-master/)
