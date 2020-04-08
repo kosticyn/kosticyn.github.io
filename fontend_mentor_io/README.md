@@ -3,4 +3,4 @@
 
 [fylo-landing-page-with-two-column-layout-master](https://kosticyn.github.io/fontend_mentor_io/fylo-landing-page-with-two-column-layout-master)
 
-[huddle-landing-page-with-single-introductory-section](https://kosticyn.github.io/fontend_mentor_io/huddle-landing-page-with-single-introductory-section)
+[huddle-landing-page-with-single-introductory-section](https://kosticyn.github.io/fontend_mentor_io/huddle-landing-page-with-single-introductory-section/index.html)
