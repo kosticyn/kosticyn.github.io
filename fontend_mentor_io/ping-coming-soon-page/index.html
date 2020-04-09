@@ -34,7 +34,7 @@
         <form id="form">
           <div class="email">
             <input id="email" type="text" placeholder="Your email adress" />
-            <small id="error" class="error"></small>
+            <small id="error" class=".error--text"></small>
           </div>
 
           <button>Notify Me</button>
@@ -72,10 +72,13 @@
 
           if (!email.value) {
             error.innerHTML = "Email is can't be empty!";
+            email.classList.add("error--input");
           } else if (!isValidEmail(email.value)) {
             error.innerHTML = "Email must be valid!";
+            email.classList.add("error--input");
           } else {
             error.innerHTML = "";
+            email.classList.remove("error--input");
             form.submit();
           }
         });

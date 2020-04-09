@@ -90,10 +90,15 @@ input {
   align-items: center;
 }
 
-.error {
+.error--text {
   font-size: 0.7rem;
   color: var(--LightRed);
   font-style: italic;
+}
+
+.error--input {
+  border-color: var(--LightRed);
+  color: var(--LightRed);
 }
 
 button {
