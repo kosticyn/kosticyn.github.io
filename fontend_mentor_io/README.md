@@ -1,10 +1,4 @@
 ## Раздел NEWBIE
-[huddle-landing-page](https://kosticyn.github.io/fontend_mentor_io/huddle-landing-page/)
+<a href="https://kosticyn.github.io/fontend_mentor_io/huddle-landing-page" target="_blank"><img src="https://kosticyn.github.io/fontend_mentor_io/huddle-landing-page/design/desktop-preview.jpg" width="200"></a><a href="https://kosticyn.github.io/fontend_mentor_io/fylo-landing-page-with-two-column-layout-master" target="_blank"><img src="https://kosticyn.github.io/fontend_mentor_io/fylo-landing-page-with-two-column-layout-master/design/desktop-preview.jpg" width="200"></a><a href="https://kosticyn.github.io/fontend_mentor_io/huddle-landing-page-with-single-introductory-section" target="_blank"><img src="https://kosticyn.github.io/fontend_mentor_io/huddle-landing-page-with-single-introductory-section/design/desktop-preview.jpg" width="200"></a><a href="https://kosticyn.github.io/fontend_mentor_io/ping-coming-soon-page" target="_blank"><img src="https://kosticyn.github.io/fontend_mentor_io/ping-coming-soon-page/design/desktop-preview.jpg" width="200"></a>
+<a href="" target="_blank"><img src="https://kosticyn.github.io/fontend_mentor_io/single-price-grid-component/design/desktop-preview.jpg" width="200"></a>
 
-[fylo-landing-page-with-two-column-layout-master](https://kosticyn.github.io/fontend_mentor_io/fylo-landing-page-with-two-column-layout-master)
-
-[huddle-landing-page-with-single-introductory-section](https://kosticyn.github.io/fontend_mentor_io/huddle-landing-page-with-single-introductory-section/index.html)
-
-[ping-coming-soon-page](https://kosticyn.github.io/fontend_mentor_io/ping-coming-soon-page/index.html)
-
-[single-price-grid-component](https://kosticyn.github.io/fontend_mentor_io/single-price-grid-component)
