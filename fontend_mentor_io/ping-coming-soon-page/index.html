@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontend Mentor | Ping coming soon page</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <img src="./images/logo.svg" alt="logo" />
+        </div>
+      </header>
+
+      <main>
+        <h1 class="title">We are launching <span>soon!</span></h1>
+        <div class="subtitle">
+          Subscribe and get notified
+        </div>
+        <form id="form">
+          <div class="email">
+            <input id="email" type="text" placeholder="Your email adress" />
+            <small id="error" class="error"></small>
+          </div>
+
+          <button>Notify Me</button>
+        </form>
+
+        <img src="./images/illustration-dashboard.png" alt="" class="media" />
+      </main>
+
+      <footer>
+        <ul class="social flex">
+          <li class="social__item flex">
+            <a href="" class="fa fa-facebook"></a>
+          </li>
+          <li class="social__item flex">
+            <a href="" class="fa fa-twitter"></a>
+          </li>
+          <li class="social__item flex">
+            <a href="" class="fa fa-instagram"></a>
+          </li>
+        </ul>
+        <div class="copyright">
+          &copy; Copyright Ping. All rights reserved.
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (() => {
+        const form = document.getElementById("form");
+        const email = document.getElementById("email");
+        const error = document.getElementById("error");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          if (!email.value) {
+            error.innerHTML = "Email is can't be empty!";
+          } else if (!isValidEmail(email.value)) {
+            error.innerHTML = "Email must be valid!";
+          } else {
+            error.innerHTML = "";
+            form.submit();
+          }
+        });
+      })();
+
+      const isValidEmail = (email) => {
+        const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (email.match(emailPattern)) {
+          return true;
+        } else {
+          return false;
+        }
+      };
+    </script>
+  </body>
+</html>
