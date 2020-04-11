@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* font-family: 'Poppins', sans-serif; */
+
+:root {
+  box-sizing: border-box;
+
+  /* ## Colors */
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --DarkBlue: hsl(249, 10%, 26%);
+  --GrayishBlue: hsl(246, 25%, 77%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url("./../images/bg-intro-mobile.png");
+  background-size: cover;
+  background-color: var(--Red);
+  
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 15% 6.67% 10% 6.67%;
+  
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up.column {
+  justify-content: space-between;
+  height: 100%;
+} 
+
+.sign-up > .about {
+  text-align: center;
+  color: white;
+  padding: 2% 0;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.sign-up > .about > .title {
+  font-size: calc(1.1rem + 5vw);
+  font-weight: 700;
+  margin-bottom: 3%;
+}
+
+.sign-up > .form {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.sign-up > .form > .try-it {
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  background-color: var(--Blue);
+  border-radius: 0.5em;
+  padding: 1em 4em;
+  margin-bottom: 6.67%;
+  box-shadow: 0 0.5em 0 rgba(0,0,0, 0.15);
+  
+}
+
+.sign-up > .form > .try-it > span {
+  font-weight: 600;
+}
+
+.sign-up > .form > .trial {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 6.67%;
+  box-shadow: 0 0.5rem 0 rgba(0,0,0, 0.15);
+}
+
+.sign-up > .form > .trial > .input-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.sign-up > .form > .trial > .input-wrap > input {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  padding: 1rem;
+  border: 1px solid var(--GrayishBlue);
+  border-radius: 0.2rem;
+  width: 100%;
+}
+
+.sign-up > .form > .trial > .input-wrap > .input-icon {
+  display: none;
+  position: absolute;
+  color: var(--Red);
+  font-size: 1.5rem;
+  top: 1rem;
+  right: 2rem;
+}
+
+.sign-up > .form > .trial > .input-wrap > .input-icon--active {
+  display: inline;
+}
+
+.sign-up > .form > .trial > .input-wrap + .input-wrap {
+  margin-top: 5%;
+}
+
+.sign-up > .form > .trial > button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  background-color: var(--Green);
+  border: none;
+  border-radius: 0.3rem;
+  padding: .8rem 0;
+  margin-top: 5%;
+  box-shadow: 0 0.2em 0 hsl(154, 99%, 35%);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sign-up > .form > .trial > button:hover {
+  background-color: hsl(154, 72%, 62%);
+}
+
+.sign-up > .form > .trial > .tas {
+  text-align: center;
+  font-size: 0.715rem;
+  color: var(--GrayishBlue);
+  margin-top: 5%;
+  padding: 0 6.67%;
+}
+
+.sign-up > .form > .trial > .tas > .link {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--Red);
+}
+
+.sign-up > .form > .trial > .input-wrap > .error--text {
+  color: var(--Red);
+  font-size: 0.715rem;
+  text-align: right;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+
+.sign-up > .form > .trial > .input-wrap > .error--input {
+  position: relative;
+  color: var(--Red);
+  border: 2px solid var(--Red);
+
+}
+
+.sign-up > .form > .trial > .input-wrap > .error--input::placeholder {
+  color: var(--Red);
+}
+
+@media (min-width: 769px) {
+ 
+
+  body {
+    background-image: url('./../images/bg-intro-desktop.png');
+    height: 100vh;
+  }
+
+  .container {
+    padding: 2% 6.67% 2% 6.67%;
+    display: flex;
+    align-self: center;
+    height: 100%;
+  }
+
+  .sign-up.column {
+    flex-direction: row;
+  }
+
+  .sign-up > .about {
+    flex: 1;
+    align-self: center;
+    margin-right: 5%;
+    text-align: left;
+  }
+
+  .sign-up > .about > .title {
+    font-size: calc(1.4rem + 2vw);
+  }
+
+  .sign-up > .about > .text {
+    font-size: 16px;
+  }
+
+  .sign-up > .form {
+    flex: 1;
+    margin: 0;
+    margin-left: 5%;
+    align-self: center;
+    
+  }
+
+}

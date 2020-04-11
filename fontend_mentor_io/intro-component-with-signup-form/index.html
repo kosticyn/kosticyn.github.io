@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+</head>
+<body>
+  <div class="container">
+    <section class="sign-up column">
+      <div class="about column">
+        <h1 class="title">Learn to code by watching others</h1>
+        <p class="text">
+          See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+          but understanding how developers think is invaluable. 
+        </p>
+      </div>
+      <div class="form column">
+        <a href="#" class="try-it">
+          <span>Try it free 7 days</span> then $20/mo. thereafter
+        </a>
+        
+        <form id="form" class="trial column">
+          <div class="input-wrap">
+            <input id="firstName" type="text" placeholder="First Name"></input>
+            <i id="errIconFN" class="input-icon fa fa-info-circle"></i>
+            <p id="errFirstName" class="error--text"></p>
+          </div>
+          <div class="input-wrap">
+            <input id="lastName" type="text" placeholder="Last Name"></input>
+            <i id="errIconLN" class="input-icon fa fa-info-circle"></i>
+            <p id="errLastName" class="error--text"></p>
+          </div>
+          <div class="input-wrap">
+            <input id="email" type="text" placeholder="Email Address"></input>
+            <i id="errIconE" class="input-icon fa fa-info-circle"></i>
+            <p id="errEmail" class="error--text"></p>
+          </div>
+          <div class="input-wrap">
+            <input id="password" type="password" placeholder="Password"></input>
+            <i id="errIconP" class="input-icon fa fa-info-circle"></i>
+            <p id="errPassword" class="error--text"></p>
+          </div>
+
+          <button>Claim your free trial</button>
+          <p class="tas">By clicking the button, you are agreeing to our <a href="#" class="link">Terms and Services</a></p>
+        </form>
+       
+      </div>
+    </section>  
+  </div>
+
+
+<script>
+
+  
+  (() => {
+    
+    const firstName = document.getElementById('firstName');
+    const lastName = document.getElementById('lastName');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+    const form = document.getElementById('form');
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      checkAllField();
+    });
+
+    firstName.addEventListener('click', (event) => {
+      removeErrorStyle(firstName, 'errIconFN', 'errFirstName');  
+    });
+
+    lastName.addEventListener('click', (event) => {
+      removeErrorStyle(lastName, 'errIconLN', 'errLastName');  
+    });
+
+    email.addEventListener('click', (event) => {
+      removeErrorStyle(email, 'errIconE', 'errEmail');
+    });
+
+    password.addEventListener('click', (event) => {
+      removeErrorStyle(password, 'errIconP', 'errPassword');
+    });
+
+
+
+  })();
+
+  const setErrorStyle = (idInput, idIcon, idText, msg) => {
+    idInput.classList.add('error--input');
+    document.getElementById(idIcon).classList.add('input-icon--active');
+    document.getElementById(idText).innerHTML = msg;
+  }
+
+  const removeErrorStyle = (idInput, idIcon, idText) => {
+    if (idInput.classList.contains('error--input')){
+      idInput.classList.remove('error--input');
+      document.getElementById(idIcon).classList.remove('input-icon--active');
+      document.getElementById(idText).innerHTML = "";
+    }
+       
+  }
+
+
+  const checkAllField = () => {
+    if (isEmpty(firstName.value)) {
+        setErrorStyle(firstName, 'errIconFN', 'errFirstName', 'First Name cannot be empty');
+      } else {
+        removeErrorStyle(firstName, 'errIconFN', 'errFirstName');  
+      };
+
+      if (isEmpty(lastName.value)) {
+        setErrorStyle(lastName, 'errIconLN', 'errLastName', 'Last Name cannot be empty');
+      } else {
+        removeErrorStyle(lastName, 'errIconLN', 'errLastName');
+      };
+
+      if (isEmpty(email.value)) {
+        setErrorStyle(email, 'errIconE', 'errEmail', 'Email cannot be empty');
+      } else if (!isValidEmail(email.value)) {
+        setErrorStyle(email, 'errIconE', 'errEmail', 'Look like this is not an email');
+      } else {
+        removeErrorStyle(email, 'errIconE', 'errEmail');
+      };
+
+      if (isEmpty(password.value)) {
+        setErrorStyle(password, 'errIconP', 'errPassword', 'Password cannot be empty');
+      } else {
+        removeErrorStyle(password, 'errIconP', 'errPassword');
+      };
+  }
+
+  const isValidEmail = (email) => {
+    const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (email.match(emailPattern)) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const isEmpty = (value) => {
+    if (value === ''){
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+</script>
+
+</body>
+</html>
