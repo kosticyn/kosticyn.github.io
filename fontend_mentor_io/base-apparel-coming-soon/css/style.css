@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+/* font-family: 'Josefin Sans', sans-serif; */
+
+:root {
+  box-sizing: border-box;
+  /* ## Colors */
+  --DesaturatedRed: hsl(0, 36%, 70%);
+  --SoftRed: hsl(0, 93%, 68%);
+  --DarkGrayishRed: hsl(0, 6%, 24%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.main {
+  height: 100%;
+}
+
+.main > .container > .wrap-logo {
+  width: 30%;
+}
+
+.main > .container > .wrap-logo > .logo {
+  width: 100%;
+}
+
+.main > .hero-img-mobile {
+  background-image: url("./../images/hero-mobile.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  padding-top: 65%;
+  height: 100%;
+}
+
+.main > .container > .title {
+  text-align: center;
+  color: var(--DarkGrayishRed);
+  font-size: calc(1rem + 8vw);
+  font-weight: 400;
+  letter-spacing: 0.115em;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-top: 15%;
+}
+
+.main > .container > .title > span {
+  color: var(--DesaturatedRed);
+  font-weight: 300;
+}
+
+.main > .container > .text {
+  color: var(--DesaturatedRed);
+  text-align: center;
+  font-size: calc(0.1rem + 3.8vw);
+  line-height: 1.5;
+  margin: 10% 0;
+}
+
+.main > .container > .form {
+  position: relative;
+}
+
+.main > .container > .form > .email {
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--DesaturatedRed);
+  width: 100%;
+  padding: 1em 21% 1em 2em;
+  border-radius: 2em;
+  border: 1px solid var(--DesaturatedRed);
+  background-color: transparent;
+}
+
+.main > .container > .err-txt {
+  display: inline-block;
+  margin-top: 0.5em;
+  margin-left: 2em;
+}
+
+.err-icon {
+  display: none;
+}
+
+.main > .container > .form > .email.error {
+  color: var(--SoftRed);
+  border-color: var(--SoftRed);
+  border-width: 2px;
+}
+
+.error {
+  color: var(--SoftRed);
+}
+
+.main > .container > .form > .email::placeholder {
+  color: var(--DesaturatedRed);
+}
+
+.main > .container > .form > .err-icon {
+  position: absolute;
+  top: 25%;
+  right: 22%;
+}
+
+.main > .container > .form > .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 2em;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  width: 20%;
+  box-shadow: 0 3px 10px hsl(0, 80%, 86%);
+}
+
+@media (min-width: 600px) {
+  body {
+    display: flex;
+  }
+
+  .main {
+    background: none;
+    background-image: url("./../images/bg-pattern-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .main {
+    min-height: 100vh;
+  }
+
+  .aside {
+    height: 100%;
+  }
+
+  .main > .container > .wrap-logo {
+    width: 30%;
+  }
+
+  .main > .hero-img-mobile {
+    display: none;
+  }
+
+  .main {
+    flex: 0.6;
+  }
+
+  .main > .container > .title {
+    text-align: left;
+    font-size: 4rem;
+  }
+
+  .main > .container > .text {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .main > .container > .form {
+    margin-bottom: 0;
+  }
+
+  .main > .container > .form > .btn:hover {
+    background: none;
+    background-color: hsl(0, 70%, 86%);
+  }
+
+  .aside {
+    flex: 0.4;
+  }
+
+  .hero-img-desktop {
+    background-image: url("./../images/hero-desktop.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-bottom: 100vh;
+    width: 100%;
+  }
+}
